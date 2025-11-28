@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Streamlit (debugpy)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "streamlit",
+        "run",
+        "ui/app.py"
+      ],
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "STREAMLIT_SERVER_HEADLESS": "true"
+      },
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

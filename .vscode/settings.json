@@ -1,0 +1,44 @@
+{
+    // ---------------------------
+    // PYTHON CONFIG
+    // ---------------------------
+    "python.defaultInterpreterPath": ".venv/Scripts/python.exe",
+    "python.pythonPath": ".venv/Scripts/python.exe",
+
+    // Tell VS Code where imports come from
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+
+    // Set PYTHONPATH for terminal
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+
+    // ---------------------------
+    // FORMATTING & LINTING
+    // ---------------------------
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+
+    // Ignore certain import warnings (Pylance false alarms)
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    },
+
+    // ---------------------------
+    // FILE WATCH / UI
+    // ---------------------------
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true
+    },
+    "search.exclude": {
+        "**/__pycache__": true
+    },
+
+    // Better autocomplete
+    "python.analysis.autoImportCompletions": true
+}
